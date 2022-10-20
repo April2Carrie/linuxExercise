@@ -1,10 +1,12 @@
 #!/bin/bash
 # prints the usage statement to standard error
-if [[($# -ne 1)&&($# -ne 2) ]]; then # Recall: "-ne" checks integer inequality.
+if [[($# -ne 1)&&($# -ne 2) ]]
+then # Recall: "-ne" checks integer inequality.
     echo "usage: $0 <column> <file.csv>" 1>&2 # write error message to stderr (below)
     exit 0
 
-elif [[($# -eq 1)]]; then
+elif [[($# -eq 1)]]
+then
     column=$1
     file=/dev/stdin
 else
